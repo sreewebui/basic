@@ -1,0 +1,14 @@
+<div class="table-repsponse">
+    <!-- <table class="table table-striped table-dark">
+        <tr>
+            <th>Id</th><th>Title</th><th>img</th>
+        </tr>
+        <tr *ngFor="let data of tableData">
+            <td>{{data.id}}</td>
+            <td>{{data.title}}</td>
+            <td ><img style="width: 100px;height: 100px;" src="{{data.url}}"></td>
+        </tr>
+    </table> -->
+    <ag-grid-angular style="width: 700px;height: 400px;" class="ag-theme-balham" [columnDefs]="coloumnDefs" [rowData]="rowData" rowSelection="multiple"></ag-grid-angular>
+    <button (click)="getSelectedRows()">selectedRow</button>
+</div>

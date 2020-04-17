@@ -1,0 +1,27 @@
+<div class="container">
+<select class="browser-default custom-select" [(ngModel)]="selectedName" (ngModelChange)="changeValue($event)">
+    <option selected>Open this select menu</option>
+    <option *ngFor="let x of data" [value]="x.name">{{x.name}}</option>
+  </select>
+  <input type="text" [(ngModel)]="searchItem">
+  <div class="table-response">
+      <table>
+          <tr>
+              <th>EmpId</th>
+              <th>EmpName</th>
+              <th>Empage</th>
+          </tr>
+          <tr *ngFor="let y of data | filter:searchItem">
+              <td>
+                {{y.id}}
+              </td>
+              <td>
+                {{y.name}}
+            </td>
+            <td>
+                {{y.age}}
+            </td>
+          </tr>
+      </table>
+  </div>
+</div>
